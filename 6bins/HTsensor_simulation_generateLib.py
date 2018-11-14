@@ -209,9 +209,7 @@ def htsensorsimu_generate_main(args):
     # Sub configure file to define the experimental setting
     exp_DF=pd.read_csv(filepath_or_buffer=args.exp_con,sep='\t',index_col='Bin')
     exp_Lst=exp_DF.columns.tolist()
-    exp_Lst.sort()
     bins_Lst=exp_DF.index.tolist()
-    bins_Lst.sort()
     #
     # Sub configure file to define the boundaries between bins for each sorting experiemnt
     # columns = ligand1R1 ligand1R2 ligand2R1 ligand2R2 ... (experiment condition)
@@ -224,6 +222,7 @@ def htsensorsimu_generate_main(args):
             temp=Bin_bou_DF.loc[bins,exp].split(',')
             Bin_bou_Dic[exp][bins]=[float(temp[0]),float(temp[1])]
     Bin_bou_DF=pd.DataFrame(Bin_bou_Dic)
+    Bin_bou_DF=Bin_bou_DF.reindex(bins_Lst)
     # total reads of every sequencing library
     total_reads=args.total_reads
     # total cells of sorting experiment
