@@ -138,8 +138,6 @@ def cytometry_sorting(pop_DF,exp_DF,Bin_bou_con,total_cells):
     sort_Dic={}
     exp_Lst=exp_DF.columns.tolist()
     bins_Lst=exp_DF.index.tolist()
-    print (Bin_bou_con.index.tolist())
-    print (bins_Lst)
     if Bin_bou_con.index.tolist()!=bins_Lst:
         logging.error('Contradictory bin setting!')
         sys.exit(-1)
