@@ -92,6 +92,6 @@ log10uResult='%s_results/%s_optimization/sensor_Log10u.csv'%(prefix,prefix)
 sigmaResult='%s_results/%s_optimization/sensor_sigma.csv'%(prefix,prefix)
 outputname='%s_results/%s_comparison/%s'%(prefix,prefix,prefix)
 print ('python HTsensor_simulation_compare.py --my_lib %s --log10u %s --sigma %s --rrange %s --output_prefix %s 2>>error.log'%(my_lib,log10uResult,sigmaResult,str(log10u_sigma_range),outputname))
-os.system('python htsensor_simulation_compare.py --my_lib %s --log10u %s --sigma %s --rrange %s --output_prefix %s 2>>error.log'%(my_lib,log10uResult,sigmaResult,str(log10u_sigma_range),outputname))
+os.system('python HTsensor_simulation_compare.py --my_lib %s --log10u %s --sigma %s --rrange %s --output_prefix %s 2>>error.log'%(my_lib,log10uResult,sigmaResult,str(log10u_sigma_range),outputname))
 print('Comparison finished!')
 

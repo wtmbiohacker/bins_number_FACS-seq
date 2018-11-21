@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "HTsensor_simulation_compare.py", line 104, in <module>
+    htsensorsimu_com_main(args)
+  File "HTsensor_simulation_compare.py", line 75, in htsensorsimu_com_main
+    plt.scatter(Xaxis,Yaxis,s=30,color='#5DADE2')
+  File "/usr/lib64/python2.7/site-packages/matplotlib/pyplot.py", line 3461, in scatter
+    ax = gca()
+  File "/usr/lib64/python2.7/site-packages/matplotlib/pyplot.py", line 969, in gca
+    return gcf().gca(**kwargs)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/pyplot.py", line 586, in gcf
+    return figure()
+  File "/usr/lib64/python2.7/site-packages/matplotlib/pyplot.py", line 533, in figure
+    **kwargs)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/backend_bases.py", line 161, in new_figure_manager
+    return cls.new_figure_manager_given_figure(num, fig)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/backends/_backend_tk.py", line 1046, in new_figure_manager_given_figure
+    window = Tk.Tk(className="matplotlib")
+  File "/usr/lib64/python2.7/lib-tk/Tkinter.py", line 1745, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
